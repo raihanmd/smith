@@ -7,13 +7,14 @@ let clip = document.querySelector(".clip");
 let toggle = document.querySelector(".menu-toggle");
 
 
+
 function countChars(obj){
   let maxLength = 300;
   let strLength = obj.value.length;
 
   if(strLength > maxLength){
     document.getElementById('charNum').innerHTML = 'Melebihi batas maksimal 300 karakter!!';
-    obj.value = obj.value.slice(0,-1); 
+    obj.value = obj.value.slice(0,-2);
   }else{
     document.getElementById('charNum').innerHTML = strLength+"/300";
   }

@@ -46,10 +46,10 @@ if(isset($_POST['btncontact'])){
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
 
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://assets.ubuntu.com/v1/vanilla-framework-version-x.x.x.min.css"
-    />
+    /> -->
   </head>
   <body>
     <!-- Navbar -->
@@ -75,7 +75,7 @@ if(isset($_POST['btncontact'])){
           <span class="span"></span>
         </li>
         <li>
-          <a href="login" class="page">login</a>
+          <a href="login" class="gin">Login</a> 
           <span class="span"></span>
         </li>
       </ul>

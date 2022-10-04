@@ -3,3 +3,4 @@ RewriteEngine on
 RewriteRule ^login login.php [NC]
 RewriteRule ^dashboard dashboard.php [NC]
 RewriteRule ^add add.php [NC]
+RewriteRule ^logout logout.php [NC]
