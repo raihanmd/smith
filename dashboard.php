@@ -120,7 +120,7 @@ if(!isset($_SESSION['login'])){
                     <div class="middle">
                         <div class="left">
                             <h3>Total Sales</h3>
-                            <h1>Rp,-12.000.000</h1>
+                            <h1>$73.39</h1>
                         </div>
                         <div class="progress">
                             <svg>
@@ -139,7 +139,7 @@ if(!isset($_SESSION['login'])){
                     <div class="middle">
                         <div class="left">
                             <h3>Total Expences</h3>
-                            <h1>Rp,-8.000.000</h1>
+                            <h1>$45.89</h1>
                         </div>
                         <div class="progress">
                             <svg>
@@ -158,7 +158,7 @@ if(!isset($_SESSION['login'])){
                     <div class="middle">
                         <div class="left">
                             <h3>Total Income</h3>
-                            <h1>Rp,-4.000.000</h1>
+                            <h1>$12.16</h1>
                         </div>
                         <div class="progress">
                             <svg>
@@ -346,5 +346,19 @@ if(!isset($_SESSION['login'])){
             </div>
         </div>
     </div>
+
+    <script src="js/dash.js"></script>
+    <script>
+        const sideMenu = document.querySelector('aside');
+        const menuBtn = document.querySelector('#menu-btn');
+        const closeBtn = document.querySelector('#close-btn');
+
+        menuBtn.addEventListener('click', () => {
+            sideMenu.style.display = 'block';
+        })
+        closeBtn.addEventListener('click', () => {
+            sideMenu.style.display = 'none';
+        })
+    </script>
 </body>
 </html>

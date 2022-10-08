@@ -1,11 +1,13 @@
-const homeText = document.querySelector('.home');
-const dashText = document.querySelector('.dash');
-const sidebar = document.querySelector('.sidebar');
-sidebar.addEventListener('mouseover', function () {
-    homeText.classList.remove ('hidden')
-    dashText.classList.remove ('hidden')
+const sideMenu = document.querySelector('aside');
+const menuBtn = document.querySelector('#menu-btn');
+const closeBtn = document.querySelector('#close-btn');
+
+console.log('aisjiajs');
+
+menuBtn.addEventListener('click', () => {
+    console.log('ihduwda');
+    sideMenu.style.display = 'block';
 })
-sidebar.addEventListener('mouseleave', function () {
-    homeText.classList.add ('hidden')
-    dashText.classList.add ('hidden')
+closeBtn.addEventListener('click', () => {
+    sideMenu.style.display = 'none';
 })

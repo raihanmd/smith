@@ -1,38 +1,3 @@
-<?php
-session_start();
-require "function.php";
-
-$gambar = query("SELECT * FROM picture");
-
-if(@$terkirim == true){
-  echo '<style type="text/css">
-  #alert1 {
-      display: block;
-  }
-  </style>';
-}
-if(@$gagal == true){
-  echo '<style type="text/css">
-  #alert2 {
-      display: block;
-  }
-  </style>';
-}
-
-if(isset($_POST['btncontact'])){
-
-  $maxpesan = strlen($_POST['pesan']);
-  if($maxpesan <= 300){
-    if(contact($_POST) > 0){
-      $terkirim = true;
-    }else{
-      $gagal = true;
-    }
-  }else{
-    $gagal = true;
-  }
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -170,11 +135,65 @@ if(isset($_POST['btncontact'])){
             <h2 class="pb-5" style="color: #000">My Gallery</h2>
           </div>
         </div>
-        <?php foreach($gambar as $g) : ?>
         <div class="row">
           <div class="col-md-4 mb-5">
             <div class="card">
-              <img src="img/<?= $g ?>.jpg" class="card-img-top" alt="gambar" />
+              <img src="img/632870eee9c50.jpeg" class="card-img-top" alt="gambar" />
+              <div class="card-body">
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-5">
+            <div class="card">
+              <img src="img/632870f4c02ab.jpg" class="card-img-top" alt="gambar" />
+              <div class="card-body">
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-5">
+            <div class="card">
+              <img src="img/632870fb85faa.jpg" class="card-img-top" alt="gambar" />
+              <div class="card-body">
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-5">
+            <div class="card">
+              <img src="img/6328710d21f37.jpg" class="card-img-top" alt="gambar" />
+              <div class="card-body">
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-5">
+            <div class="card">
+              <img src="img/63287107edbf5.jpg" class="card-img-top" alt="gambar" />
+              <div class="card-body">
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-5">
+            <div class="card">
+              <img src="img/6328711272326.jpg" class="card-img-top" alt="gambar" />
               <div class="card-body">
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
@@ -184,41 +203,45 @@ if(isset($_POST['btncontact'])){
             </div>
           </div>
         </div>
-        <?php endforeach; ?>
       </div>
     </section>
-
-    <section id="portfolio" class="mt-5">
-      <div class="container text-center">
+<!--! NU IYE DEUI -->
+    <section id="portfolio">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col">
+            <h2>Our Ability</h2>
+          </div>
+        </div>
         <div class="row">
-          <div class="col-md-12">
-            I have high skills in developing and programming
-            <!-- <div class="d-flex p-2 justify-content-between">
-              <div class="box">
-                  <img src="img/icon-1.png" style="height: 7rem;">
-                  <h3>html</h3>
-              </div>
-              <div class="box">
-                  <img src="img/icon-2.png" style="height: 7rem;">
-                  <h3>css</h3>
-              </div>
-              <div class="box">
-                  <img src="img/icon-3.png" style="height: 7rem;">
-                  <h3>javascript</h3>
-              </div>
-              <div class="box">
-                  <img src="img/icon-4.png" style="height: 7rem;">
-                  <h3>sass</h3>
-              </div>
-              <div class="box">
-                  <img src="img/icon-5.png" style="height: 7rem;">
-                  <h3>jquery</h3>
-              </div>
-              <div class="box">
-                  <img src="img/icon-6.png" style="height: 7rem;">
-                  <h3>react.js</h3>
-              </div>
-          </div> -->
+          <div class="col-md-4">
+            <img src="img/icon-1.png" alt="skill">
+            <h3>HTML</h3>
+          </div>
+          <div class="col-md-4">
+            <img src="img/icon-2.png" alt="skill">
+            <h3>CSS</h3>
+
+          </div>
+          <div class="col-md-4">
+            <img src="img/icon-3.png" alt="skill">
+            <h3>JAVASCRIPT</h3>
+
+          </div>
+          <div class="col-md-4">
+            <img src="img/icon-4.png" alt="skill">
+            <h3>SASS</h3>
+
+          </div>
+          <div class="col-md-4">
+            <img src="img/icon-5.png" alt="skill">
+            <h3>JQUERY</h3>
+
+          </div>
+          <div class="col-md-4">
+            <img src="img/icon-6.png" alt="skill">
+            <h3>REACT.JS</h3>
+
           </div>
         </div>
       </div>

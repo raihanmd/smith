@@ -1,0 +1,213 @@
+* ,html, body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+.jumbotron {
+    padding: 2rem 1rem;
+    background-color: #e2edff;
+    text-align: center;
+}
+
+.jumbotron img {
+    border-radius: 100%;
+}
+
+#about {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+#about h2 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.row .col-4 {
+    text-align: justify;
+    padding: 40px;
+}
+
+#Gallery {
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+    background-color: #e2edff;
+}
+
+.gallery {
+    text-align: center;
+    padding: 20px;
+    padding: 40px;
+}
+
+.images {
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    gap: 5px;
+}
+
+.images .items {
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+    border: 3px solid black;
+    background-color: lightblue;
+    justify-content: center;
+}
+
+.images .items img {
+    display: block;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+}
+
+
+
+
+/* NavBar */
+.navbar {
+    display: flex;
+    background-color: #0099ff;
+    justify-content: space-around;
+    /* padding: 20px 0; */
+    color: rgb(255, 255, 255);
+    height: 50px;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-family: cursive;
+    letter-spacing: 3px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+.navbar ul li a:hover {
+    color: rgb(20, 203, 220);
+}
+
+/* Hanburger Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -5px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    position: relative;
+    transition: all 0.5s;
+}
+
+
+/* Hanburger Menu Animation */
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+    background-color: white;
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+    background-color: white;
+    transform: rotate(-45deg) translate(-1px, 0px);
+
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+/* Responsive BreakPoint */
+
+/* Ukuran Tablet */
+@media (max-width: 768px) {
+    nav ul {
+        width: 50%;
+    }
+}
+
+/* Ukuran Mobile */
+@media (max-width: 576px) {
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .navbar ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        background-color: #0099ff;
+        z-index: 4;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    nav ul.slide {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
